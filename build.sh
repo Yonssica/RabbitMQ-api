@@ -4,11 +4,11 @@
 #you can change this code for your project
 ###START###
 #docker hub 仓库名
-DOCKERRESPOSITORYUSERNAME=ilstest.azurecr.cn
+DOCKERRESPOSITORYUSERNAME=rabbitmq-api
 #docker hub用户名
-DOCKERLOGINUSERNAME=ilstest
+DOCKERLOGINUSERNAME=yonssica
 #dockerhub密码
-DOCKERLOGINPASSWORD=PwG309Jsabeyw1+CeR8yAjBr5opHh7El
+DOCKERLOGINPASSWORD=lo930217ve
 #dockerhub 仓库tag名
 RESPOSITORYNAME=rabbitmq-api
 #应用名称
