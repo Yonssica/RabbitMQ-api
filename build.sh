@@ -31,9 +31,7 @@ MYIMAGE=${DOCKERRESPOSITORYUSERNAME}/${RESPOSITORYNAME}:${APPNAME}.${APPPORT}
 
 #don't change this code
 ###START###
-cd ../
-mvn clean install -Dmaven.test.skip=true
-cd -
+
 # uncomment if you need push
 docker login -u ${DOCKERLOGINUSERNAME} -p ${DOCKERLOGINPASSWORD}
 # stop all container
@@ -44,7 +42,7 @@ docker rm ${CONTAINNERNAME}
 docker rmi ${MYIMAGE}
 # build jar and image
 #mvn package -e -X docker:build -DskipTest
-mvn package docker:build
+mvn clean install package docker:build -DskipTests
 # push image
 #docker push ${MYIMAGE}
 # running container
