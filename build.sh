@@ -33,18 +33,18 @@ MYIMAGE=${DOCKERRESPOSITORYUSERNAME}/${RESPOSITORYNAME}:${APPNAME}.${APPPORT}
 ###START###
 
 # uncomment if you need push
-docker login -u ${DOCKERLOGINUSERNAME} -p ${DOCKERLOGINPASSWORD}
+sudo docker login -u ${DOCKERLOGINUSERNAME} -p ${DOCKERLOGINPASSWORD}
 # stop all container
-docker stop ${CONTAINNERNAME}
+sudo docker stop ${CONTAINNERNAME}
 # remove all container
-docker rm ${CONTAINNERNAME}
+sudo docker rm ${CONTAINNERNAME}
 # remove old images
-docker rmi ${MYIMAGE}
+sudo docker rmi ${MYIMAGE}
 # build jar and image
 #mvn package -e -X docker:build -DskipTest
-mvn clean install package docker:build -DskipTests
+sudo mvn clean install package docker:build -DskipTests
 # push image
 #docker push ${MYIMAGE}
 # running container
-docker run -it -dp ${OUTPORT}:${INPORT} -v ${HOSTPATH}:${CONTAINNERPATH} --name ${CONTAINNERNAME} ${MYIMAGE} /bin/bash
+sudo docker run -it -dp ${OUTPORT}:${INPORT} -v ${HOSTPATH}:${CONTAINNERPATH} --name ${CONTAINNERNAME} ${MYIMAGE} /bin/bash
 ###END###
