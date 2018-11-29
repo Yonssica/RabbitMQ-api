@@ -4,7 +4,7 @@
 #you can change this code for your project
 ###START###
 #docker hub 仓库名
-DOCKERRESPOSITORYUSERNAME=rabbitmq-api
+DOCKERRESPOSITORYUSERNAME=yonssica
 #docker hub用户名
 DOCKERLOGINUSERNAME=yonssica
 #dockerhub密码
