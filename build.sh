@@ -33,7 +33,7 @@ MYIMAGE=${DOCKERRESPOSITORYUSERNAME}/${RESPOSITORYNAME}:${APPNAME}.${APPPORT}
 ###START###
 
 # uncomment if you need push
-sudo docker login ${DOCKERRESPOSITORYUSERNAME}
+sudo docker login ${DOCKERRESPOSITORYUSERNAME} -u ${DOCKERLOGINUSERNAME} -p ${DOCKERLOGINPASSWORD}
 # stop all container
 sudo docker stop ${CONTAINNERNAME}
 # remove all container
