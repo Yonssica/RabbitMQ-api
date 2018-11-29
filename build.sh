@@ -4,11 +4,11 @@
 #you can change this code for your project
 ###START###
 #docker hub 仓库名
-DOCKERRESPOSITORYUSERNAME=yonssica
+DOCKERRESPOSITORYUSERNAME=ilstest.azurecr.cn
 #docker hub用户名
-DOCKERLOGINUSERNAME=yonssica
+DOCKERLOGINUSERNAME=ilstest
 #dockerhub密码
-DOCKERLOGINPASSWORD=lo930217ve
+DOCKERLOGINPASSWORD=PwG309Jsabeyw1+CeR8yAjBr5opHh7El
 #dockerhub 仓库tag名
 RESPOSITORYNAME=rabbitmq-api
 #应用名称
@@ -33,7 +33,7 @@ MYIMAGE=${DOCKERRESPOSITORYUSERNAME}/${RESPOSITORYNAME}:${APPNAME}.${APPPORT}
 ###START###
 
 # uncomment if you need push
-sudo docker login -u ${DOCKERLOGINUSERNAME} -p ${DOCKERLOGINPASSWORD}
+sudo docker login ${DOCKERRESPOSITORYUSERNAME} -u ${DOCKERLOGINUSERNAME} -p ${DOCKERLOGINPASSWORD}
 # stop all container
 sudo docker stop ${CONTAINNERNAME}
 # remove all container
